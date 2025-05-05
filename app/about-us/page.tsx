@@ -22,14 +22,15 @@ export default function AboutUsPage() {
         >
           <source src="/About.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 z-10 flex items-center justify-start px-8">
-          <h1 className="text-5xl lg:text-6xl font-bold">About Us</h1>
-        </div>
+        <div className="absolute inset-0 z-10 flex items-center justify-center">
+  <h1 className="text-5xl lg:text-6xl font-bold text-blue-600 text-center">About Us</h1>
+</div>
+
       </div>
 
       {/* Company Overview Section */}
       <section className="py-16 px-6 max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-10">
-        <Image src="/images/about-overview.png" alt="Team" width={500} height={500} className="rounded-lg" />
+        <Image src="/SS.jpeg" alt="Team" width={500} height={500} className="rounded-lg" />
         <div>
           <h2 className="text-4xl font-bold mb-4">Choose The Best IT Service Provider</h2>
           <p className="text-blue-200 text-lg mb-6">
@@ -91,9 +92,9 @@ export default function AboutUsPage() {
         <h2 className="text-4xl font-bold mb-12">Our Awesome Team Members</h2>
         <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
           {[
-            { name: 'Bhanuka', role: 'CEO', img: '/images/team-bhanuka.png' },
-            { name: 'Dushan', role: 'Director', img: '/images/team-dushan.png' },
-            { name: 'Omar Nafiz', role: 'Director', img: '/images/team-omar.png' },
+            { name: 'Bhanuka', role: 'CEO', img: '/BB.jpeg' },
+            { name: 'Dushan', role: 'Director', img: '/BB.jpeg' },
+            { name: 'Omar Nafiz', role: 'Director', img: '/BB.jpeg' },
           ].map((member, idx) => (
             <div key={idx} className="flex flex-col items-center">
               <Image src={member.img} alt={member.name} width={180} height={180} className="rounded-lg mb-4" />

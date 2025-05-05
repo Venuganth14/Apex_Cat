@@ -17,14 +17,15 @@ export default function ContactPage() {
         >
           <source src="/Contact.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 z-10 flex items-center justify-start px-8">
-          <div className="flex flex-col max-w-3xl">
-            <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
-            <p className="text-blue-200 text-lg">
-              We're here to help. Reach out to us for any inquiries or support.
-            </p>
-          </div>
-        </div>
+        <div className="absolute inset-0 z-10 flex items-center justify-center px-8">
+  <div className="flex flex-col max-w-3xl text-center">
+    <h1 className="text-5xl font-bold mb-4 text-blue-600">Contact Us</h1>
+    <p className="text-blue-400 text-lg">
+      We're here to help. Reach out to us for any inquiries or support.
+    </p>
+  </div>
+</div>
+
       </div>
 
       {/* Contact Information Section */}
@@ -33,7 +34,7 @@ export default function ContactPage() {
           <motion.div whileHover={{ scale: 1.05 }}>
             <Card className="bg-[#003566] text-white">
               <CardContent className="p-6">
-                <h4 className="text-xl font-semibold mb-2">Head Office</h4>
+                <h4 className="text-xl font-semibold mb-2">SriLanka Office</h4>
                 <p className="text-blue-200 text-sm mb-2">
                   376/A Kaduwela Rd, Koswatta, Battaramulla, Western 10120, LK
                 </p>

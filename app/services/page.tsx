@@ -9,35 +9,42 @@ const services = [
     title: "Web Development",
     description:
       "Crafting stunning websites that captivate & engage. Elevate your online presence with immersive digital experiences designed to leave a lasting impression.",
-    image: "/images/services/web-development.jpg",
-    link: "/services/web-development",
+      image: "/WebDevelopement.JPG",
+      link: "/services/web-development",
   },
   {
     title: "Mobile Application Development",
     description:
       "Building intuitive and responsive mobile applications tailored to your business needs, ensuring seamless user experiences across all devices.",
-    image: "/images/services/mobile-app.jpg",
+    image: "/MobileApplication.JPG",
     link: "/services/mobile-application-development",
   },
   {
     title: "Digital Marketing",
     description:
       "Drive organic growth & engagement! Our SEO & SMO services improve search ranking, social media presence & brand awareness. Get a free quote today!",
-    image: "/images/services/digital-marketing.jpg",
+    image: "/ApexAiAssist.JPG",
     link: "/services/digital-marketing",
   },
   {
     title: "Catalyst Cloud Service",
     description:
       "Catalyst Cloud Service offers secure, scalable, and high-performance cloud solutions for businesses of all sizes.",
-    image: "/images/services/cloud-service.jpg",
+    image: "/Cloud Service.JPG",
     link: "/services/catalyst-cloud-service",
   },
   {
     title: "Catalyst Digital Innovation",
     description:
       "We offer a comprehensive suite of digital marketing services, including search engine optimization (SEO), social media marketing, pay-per-click (PPC) advertising, and more.",
-    image: "/images/services/digital-innovation.jpg",
+    image: "/CatalystDigitalInnovation.JPG",
+    link: "/services/catalyst-digital-innovation",
+  },
+  {
+    title: "Apex AI Assist for Smart Automation",
+    description:
+      "We offer a comprehensive suite of digital marketing services, including search engine optimization (SEO), social media marketing, pay-per-click (PPC) advertising, and more.",
+    image: "/ApexAiAssist.JPG",
     link: "/services/catalyst-digital-innovation",
   },
 ];
@@ -56,15 +63,15 @@ export default function ServicesPage() {
         >
           <source src="/Services.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 z-10 flex items-center justify-start px-8">
-          <div className="flex flex-col max-w-3xl">
-            <h1 className="text-5xl font-bold mb-4">Our Services</h1>
-            <p className="text-blue-200 text-lg">
-              Delivering high-quality, innovative solutions for your digital
-              needs.
-            </p>
-          </div>
-        </div>
+        <div className="absolute inset-0 z-10 flex items-center justify-center px-8">
+  <div className="flex flex-col max-w-3xl text-center">
+    <h1 className="text-5xl font-bold mb-4 text-blue-600">Our Services</h1>
+    <p className="text-blue-400 text-lg">
+      Delivering high-quality, innovative solutions for your digital needs.
+    </p>
+  </div>
+</div>
+
       </div>
 
       {/* Services Section */}
@@ -88,12 +95,12 @@ export default function ServicesPage() {
                     <p className="text-blue-100 text-sm mb-4">
                       {service.description}
                     </p>
-                    <a
+                    {/* <a
                       href={service.link}
                       className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded transition"
                     >
                       Learn More
-                    </a>
+                    </a> */}
                   </div>
                 </CardContent>
               </Card>

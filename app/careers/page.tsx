@@ -21,17 +21,20 @@ export default function CareersPage() {
           >
             <source src="/Careers.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 z-10 flex items-center justify-start px-8">
-            <h1 className="text-5xl lg:text-4xl font-bold">Join a team where innovation meets impact.<br />
-  Collaborate with brilliant minds on global projects.<br />
-  Grow your skills in a culture of innovation.<br />
-  Shape the digital future with purpose.</h1>
-          </div>
+          <div className="absolute inset-0 z-10 flex items-center justify-center px-8">
+  <h1 className="text-5xl lg:text-4xl font-bold text-blue-600 text-center">
+    Join a team where innovation meets impact.<br />
+    Collaborate with brilliant minds on global projects.<br />
+    Grow your skills in a culture of innovation.<br />
+    Shape the digital future with purpose.
+  </h1>
+</div>
+
         </div>
   
         {/* Company Overview Section */}
         <section className="py-16 px-6 max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-10">
-          <Image src="/images/about-overview.png" alt="Team" width={500} height={500} className="rounded-lg" />
+          <Image src="/CC.jpeg" alt="Team" width={500} height={500} className="rounded-lg" />
           <div>
             <h2 className="text-4xl font-bold mb-4">Choose The Best IT Service Provider</h2>
             <p className="text-blue-200 text-lg mb-6">
