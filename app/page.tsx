@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+
 import TechnologiesSection from './components/TechnologiesSection';
 import ServicesSection from './components/ServicesSection';
 import AboutUsSection from './components/AboutUsSection';
