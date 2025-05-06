@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import AnimatedBubbles from './AnimatedBubbles';
 
@@ -14,32 +14,6 @@ const services = [
 ];
 
 const ServicesSection = () => {
-  type Bubble = {
-    width: number;
-    height: number;
-    top: number;
-    left: number;
-    duration: number;
-    delay: number;
-  };
-  
-  const [bubbles, setBubbles] = useState<Bubble[]>([]);
-  
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    const generatedBubbles = Array.from({ length: 20 }, () => ({
-      width: Math.random() * 30 + 20,
-      height: Math.random() * 30 + 20,
-      top: Math.random() * 100,
-      left: -50,
-      duration: Math.random() * 40 + 20,
-      delay: Math.random() * 20,
-    }));
-    setBubbles(generatedBubbles);
-  }, []);
-
   return (
     <section
       id="services"
@@ -85,25 +59,9 @@ const ServicesSection = () => {
       </div>
 
       {/* Bubble animation */}
-      {mounted && (
-        <div className="absolute inset-0 overflow-hidden z-0">
-          {/* {bubbles.map((bubble, i) => (
-            <div
-              key={i}
-              className="absolute bg-blue-400 opacity-20 rounded-full animate-bubble-side"
-              style={{
-                width: `${bubble.width}px`,
-                height: `${bubble.height}px`,
-                top: `${bubble.top}%`,
-                left: `${bubble.left}px`,
-                animationDuration: `${bubble.duration}s`,
-                animationDelay: `${bubble.delay}s`,
-              }}
-            ></div>
-          ))} */}
-          <AnimatedBubbles count={20} direction="both" />
-        </div>
-      )}
+      <div className="absolute inset-0 overflow-hidden z-0">
+        <AnimatedBubbles count={20} direction="both" />
+      </div>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#03045E] via-[#023E8A] to-[#03045E] opacity-30 animate-gradient z-0"></div>

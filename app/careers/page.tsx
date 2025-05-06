@@ -106,8 +106,9 @@ export default function CareersPage() {
       <section className="text-center py-20 px-6">
         <h3 className="text-3xl font-bold mb-4">Ready to Make an Impact?</h3>
         <p className="text-blue-200 mb-6">
-          If you're passionate about technology and innovation, we'd love to hear from you.
-        </p>
+  If you&apos;re passionate about technology and innovation, we&apos;d love to hear from you.
+</p>
+
         <a
           href="/job-apply"
           className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition"

@@ -1,20 +1,11 @@
 "use client";
 
-import Image from "next/image";
-import Header from "./components/Header";
 import TechnologiesSection from "./components/TechnologiesSection";
-import ServicesSection from "./components/ServicesSection"; // Check spelling, should be ServicesSection.tsx
+import ServicesSection from "./components/ServicesSection";
 import AboutUsSection from "./components/AboutUsSection";
 import TestimonialSection from "./components/TestimonialSection";
 import ContactUsSection from "./components/ContactUsSection";
-import Footer from "./components/Footer";
-import { Poppins } from "next/font/google";
 import LatestBlogSection from "./components/LatestBlogSection";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"], // Normal, SemiBold, Bold
-});
 
 export default function Home() {
   return (
@@ -33,11 +24,6 @@ export default function Home() {
           Your browser does not support the video tag.
         </video>
 
-        {/* Header */}
-        {/* <div className="relative z-50 pointer-events-auto">
-          <Header />
-        </div> */}
-
         {/* Hero Text */}
         <div className="absolute inset-0 z-10 flex items-center px-8">
           <div className="text-white">
@@ -53,16 +39,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <TechnologiesSection />
-      {/* Services Section BELOW Video */}
-      <ServicesSection />
 
+      {/* Section Components */}
+      <TechnologiesSection />
+      <ServicesSection />
       <AboutUsSection />
       <LatestBlogSection />
-
       <TestimonialSection />
       <ContactUsSection />
-      {/* <Footer /> */}
     </div>
   );
 }

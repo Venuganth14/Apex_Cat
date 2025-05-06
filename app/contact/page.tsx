@@ -18,14 +18,13 @@ export default function ContactPage() {
           <source src="/Contact.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 z-10 flex items-center justify-center px-8">
-  <div className="flex flex-col max-w-3xl text-center">
-    <h1 className="text-5xl font-bold mb-4 text-blue-600">Contact Us</h1>
-    <p className="text-blue-400 text-lg">
-      We're here to help. Reach out to us for any inquiries or support.
-    </p>
-  </div>
-</div>
-
+          <div className="flex flex-col max-w-3xl text-center">
+            <h1 className="text-5xl font-bold mb-4 text-blue-600">Contact Us</h1>
+            <p className="text-blue-400 text-lg">
+              We&apos;re here to help. Reach out to us for any inquiries or support.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Contact Information Section */}
@@ -70,7 +69,7 @@ export default function ContactPage() {
       <section className="py-16 px-6 max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-6">Get in Touch</h2>
         <p className="text-blue-200 text-lg mb-8">
-          Have questions or need assistance? Fill out the form below, and we'll
+          Have questions or need assistance? Fill out the form below, and we&apos;ll
           get back to you as soon as possible.
         </p>
         <form className="space-y-6">

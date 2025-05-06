@@ -101,7 +101,9 @@ const TestimonialSection = () => {
           />
           <h4 className="text-blue-200 font-bold text-lg mb-1">{testimonials[current].name}</h4>
           <p className="text-blue-400 text-sm mb-4">{testimonials[current].title}</p>
-          <p className="text-blue-200 italic max-w-xl">"{testimonials[current].feedback}"</p>
+          <p className="text-blue-200 italic max-w-xl">
+            &quot;{testimonials[current].feedback}&quot;
+          </p>
 
           {/* Stars */}
           <div className="flex justify-center mt-4 text-yellow-400">
