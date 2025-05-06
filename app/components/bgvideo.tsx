@@ -10,7 +10,7 @@ export default function BackgroundVideo() {
       playsInline
     >
       <source
-        src="1.mp4"
+        src="https://videos.pexels.com/video-files/8817503/8817503-uhd_2560_1440_30fps.mp4"
         type="video/mp4"
       />
       Your browser does not support the video tag.
