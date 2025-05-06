@@ -12,7 +12,8 @@ export default function Home() {
     <div className="relative w-full">
       <div className="relative w-full h-screen overflow-hidden">
         <video className="absolute top-0 left-0 w-full h-full object-cover z-0 pointer-events-none" autoPlay loop muted playsInline>
-          <source src="/sample1.mp4" type="video/mp4" />
+        <source src="/sample1.mp4" type="video/mp4" />
+
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 z-10 flex items-center px-8">
