@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import TechnologiesSection from './components/TechnologiesSection';
 import ServicesSection from './components/ServicesSection';
 import AboutUsSection from './components/AboutUsSection';
@@ -11,10 +12,18 @@ export default function Home() {
   return (
     <div className="relative w-full">
       <div className="relative w-full h-screen overflow-hidden">
-      <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-  <source src="/sample.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+      <Image
+  src="/hero-banner.png"
+  alt="Hero Background"
+  fill
+  priority
+  className="object-cover z-0"
+/>
+
+
+
+
+
 
         {/* <div className="absolute inset-0 z-10 flex items-center px-8">
           <div className="text-white">
