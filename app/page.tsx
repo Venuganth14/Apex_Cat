@@ -8,6 +8,7 @@ import TestimonialSection from './components/TestimonialSection';
 import ContactUsSection from './components/ContactUsSection';
 import LatestBlogSection from './components/LatestBlogSection';
 
+
 export default function Home() {
   return (
     <div className="relative w-full">
@@ -19,7 +20,7 @@ export default function Home() {
   muted
   playsInline
 >
-  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+  <source src="/2.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
 
