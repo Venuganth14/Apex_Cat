@@ -28,7 +28,7 @@ export default function Home() {
 
 
 
-        {/* <div className="absolute inset-0 z-10 flex items-center px-8">
+        <div className="absolute inset-0 z-10 flex items-center px-8">
           <div className="text-white">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
               Innovate. <br />
@@ -40,7 +40,7 @@ export default function Home() {
               smart automation, and digital excellence
             </p>
           </div>
-        </div> */}
+        </div>
       </div>
       <TechnologiesSection />
       <ServicesSection />
