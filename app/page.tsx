@@ -1,30 +1,20 @@
-"use client";
+'use client';
 
-import TechnologiesSection from "./components/TechnologiesSection";
-import ServicesSection from "./components/ServicesSection";
-import AboutUsSection from "./components/AboutUsSection";
-import TestimonialSection from "./components/TestimonialSection";
-import ContactUsSection from "./components/ContactUsSection";
-import LatestBlogSection from "./components/LatestBlogSection";
+import TechnologiesSection from './components/TechnologiesSection';
+import ServicesSection from './components/ServicesSection';
+import AboutUsSection from './components/AboutUsSection';
+import TestimonialSection from './components/TestimonialSection';
+import ContactUsSection from './components/ContactUsSection';
+import LatestBlogSection from './components/LatestBlogSection';
 
 export default function Home() {
   return (
     <div className="relative w-full">
-      {/* Video Section */}
       <div className="relative w-full h-screen overflow-hidden">
-        {/* Video Background */}
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover z-0 pointer-events-none"
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
+        <video className="absolute top-0 left-0 w-full h-full object-cover z-0 pointer-events-none" autoPlay loop muted playsInline>
           <source src="/sample1.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-
-        {/* Hero Text */}
         <div className="absolute inset-0 z-10 flex items-center px-8">
           <div className="text-white">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
@@ -39,8 +29,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/* Section Components */}
       <TechnologiesSection />
       <ServicesSection />
       <AboutUsSection />

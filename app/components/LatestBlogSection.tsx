@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 import Image from 'next/image';
@@ -52,27 +52,7 @@ const blogPosts = [
   },
 ];
 
-const generateBubbles = () => {
-  const seed = 12345;
-  const random = (function (seed) {
-    return function () {
-      seed = (seed * 9301 + 49297) % 233280;
-      return seed / 233280;
-    };
-  })(seed);
-
-  return Array.from({ length: 20 }, (_, i) => ({
-    width: random() * 30 + 20,
-    height: random() * 30 + 20,
-    top: random() * 100,
-    side: i % 2 === 0 ? 'left' : 'right',
-    duration: random() * 40 + 20,
-    delay: random() * 20,
-  }));
-};
-
 const LatestBlogSection = () => {
-  const [bubbles] = useState(generateBubbles);
   const timer = useRef<NodeJS.Timeout | null>(null);
 
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
@@ -105,20 +85,6 @@ const LatestBlogSection = () => {
     >
       {/* Bubble Layer */}
       <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
-        {/* {bubbles.map((bubble, i) => (
-          <div
-            key={i}
-            className="absolute bg-blue-400 opacity-20 rounded-full animate-bubble-side"
-            style={{
-              width: `${bubble.width}px`,
-              height: `${bubble.height}px`,
-              top: `${bubble.top}%`,
-              [bubble.side]: '-50px',
-              animationDuration: `${bubble.duration}s`,
-              animationDelay: `${bubble.delay}s`,
-            }}
-          />
-        ))} */}
         <AnimatedBubbles count={20} direction="both" />
       </div>
 
