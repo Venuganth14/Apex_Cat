@@ -12,48 +12,9 @@ export default function CareersPage() {
       <div className="relative w-full h-screen overflow-hidden">
         <CareerVideo />
         <div className="absolute inset-0 z-10 flex items-center justify-center px-8">
-          <h1 className="text-5xl font-bold mb-4 text-blue-600">
-            Careers
-          </h1>
+          <h1 className="text-5xl font-bold mb-4 text-blue-600">Careers</h1>
         </div>
       </div>
-
-      {/* Company Overview Section */}
-      <section className="py-16 px-6 max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-10">
-        <Image
-          src="/CC.jpeg"
-          alt="Team"
-          width={500}
-          height={500}
-          className="rounded-lg"
-        />
-        <div>
-          <h2 className="text-4xl font-bold mb-4">
-            Choose The Best IT Service Provider
-          </h2>
-          <p className="text-blue-200 text-lg mb-6">
-            We are a team of experienced designers, developers, and digital
-            strategists. Through our bespoke result-driven solutions, we deliver
-            measurable outcomes that empower our clients. We&apos;ve worked with
-            thousands of clients and established ourselves as one of the most
-            trusted online solution providers globally.
-          </p>
-          <div className="space-x-4 mb-6">
-            <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">
-              Our Mission
-            </button>
-            <button className="bg-gray-600 hover:bg-gray-700 px-4 py-2 rounded">
-              Our Vision
-            </button>
-          </div>
-          <p className="text-blue-100 text-md">
-            Our mission is to revolutionize our clients&apos; enterprises,
-            enabling them to harness cutting-edge technologies and enhance their
-            operations. We aspire to consistently deliver top-notch products and
-            services.
-          </p>
-        </div>
-      </section>
 
       <section className="py-16 px-6 max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-6">Where IT Meets Passion</h2>

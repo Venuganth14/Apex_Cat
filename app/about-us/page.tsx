@@ -1,7 +1,6 @@
-// AboutUsPage.tsx with ShadCN UI enhancements for strategy and core divisions
-
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
@@ -9,16 +8,16 @@ import TestimonialSection from '../components/TestimonialSection';
 import AbVideo from '../components/abvideo';
 
 export default function AboutUsPage() {
+  const [activeTab, setActiveTab] = useState<'mission' | 'vision'>('mission');
+
   return (
     <div className="relative w-full bg-gradient-to-br from-[#00204a] via-[#003566] to-[#001d3d] text-white font-poppins">
-
       {/* Hero Section */}
       <div className="relative w-full h-screen overflow-hidden">
-        <AbVideo/>
+        <AbVideo />
         <div className="absolute inset-0 z-10 flex items-center justify-center">
-  <h1 className="text-5xl lg:text-6xl font-bold text-blue-600 text-center">About Us</h1>
-</div>
-
+          <h1 className="text-5xl lg:text-6xl font-bold text-blue-600 text-center">About Us</h1>
+        </div>
       </div>
 
       {/* Company Overview Section */}
@@ -30,11 +29,29 @@ export default function AboutUsPage() {
             We are a team of experienced designers, developers, and digital strategists. Through our bespoke result-driven solutions, we deliver measurable outcomes that empower our clients. We’ve worked with thousands of clients and established ourselves as one of the most trusted online solution providers globally.
           </p>
           <div className="space-x-4 mb-6">
-            <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">Our Mission</button>
-            <button className="bg-gray-600 hover:bg-gray-700 px-4 py-2 rounded">Our Vision</button>
+            <button
+              onClick={() => setActiveTab('mission')}
+              className={`px-4 py-2 rounded ${activeTab === 'mission' ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-600 hover:bg-gray-700'}`}
+            >
+              Our Mission
+            </button>
+            <button
+              onClick={() => setActiveTab('vision')}
+              className={`px-4 py-2 rounded ${activeTab === 'vision' ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-600 hover:bg-gray-700'}`}
+            >
+              Our Vision
+            </button>
           </div>
           <p className="text-blue-100 text-md">
-            Our mission is to revolutionize our clients’ enterprises, enabling them to harness cutting-edge technologies and enhance their operations. We aspire to consistently deliver top-notch products and services.
+            {activeTab === 'mission' ? (
+              <>
+                Our mission is to revolutionize our clients’ enterprises, enabling them to harness cutting-edge technologies and enhance their operations. We aspire to consistently deliver top-notch products and services.
+              </>
+            ) : (
+              <>
+                We aim to become the foremost leader globally, driving sustainable growth and prosperity for both our local and global clients. Our ongoing evolution is geared towards establishing our dominance in the dynamic realm of web and app technologies.
+              </>
+            )}
           </p>
         </div>
       </section>
@@ -57,7 +74,7 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Services Overview Section with ShadCN Cards */}
+      {/* Services Overview Section */}
       <section className="py-20 px-6 max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold mb-8">We Combine Strategy with Marketing</h2>
         <p className="text-blue-200 text-lg mb-10">
@@ -80,25 +97,33 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Team Section with Uniform Cards */}
       <section className="bg-[#0a1128] py-20 px-6 text-center">
         <h2 className="text-4xl font-bold mb-12">Our Awesome Team Members</h2>
         <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
           {[
             { name: 'Bhanuka', role: 'CEO', img: '/BB.jpeg' },
-            { name: 'Dushan', role: 'Director', img: '/BB.jpeg' },
-            { name: 'Omar Nafiz', role: 'Director', img: '/BB.jpeg' },
+            { name: 'Dushan', role: 'Director', img: '/DD.jpeg' },
+            { name: 'Omar Nafiz', role: 'Director', img: '/OO.jpeg' },
           ].map((member, idx) => (
-            <div key={idx} className="flex flex-col items-center">
-              <Image src={member.img} alt={member.name} width={180} height={180} className="rounded-lg mb-4" />
-              <p className="font-semibold text-white text-lg">{member.name}</p>
-              <p className="text-blue-200 text-sm">{member.role}</p>
-            </div>
+            <Card key={idx} className="bg-[#003566] text-white h-[320px] flex flex-col items-center justify-center p-6">
+              <CardContent className="flex flex-col items-center justify-center">
+                <Image
+                  src={member.img}
+                  alt={member.name}
+                  width={140}
+                  height={140}
+                  className="rounded-full mb-4 object-cover"
+                />
+                <p className="font-semibold text-white text-lg">{member.name}</p>
+                <p className="text-blue-200 text-sm">{member.role}</p>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </section>
 
-      {/* Core Divisions Section with Animated Cards */}
+      {/* Core Divisions Section */}
       <section className="py-20 px-6 max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold mb-8">Core Divisions</h2>
         <div className="grid md:grid-cols-2 gap-8">
@@ -133,9 +158,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* Testimonial Section */}
-   
       <TestimonialSection />
-      
     </div>
   );
 }
