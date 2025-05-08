@@ -10,7 +10,7 @@ export default function CareerVideo() {
       playsInline
     >
       <source
-        src="https://videos.pexels.com/video-files/7989470/7989470-sd_640_360_25fps.mp4"
+        src="https://videos.pexels.com/video-files/4540680/4540680-sd_640_360_25fps.mp4"
         type="video/mp4"
       />
       Your browser does not support the video tag.

@@ -11,23 +11,28 @@ import BackgroundVideo from "./components/bgvideo";
 export default function Home() {
   return (
     <div className="relative w-full">
+      {/* Hero Section with Video */}
       <div className="relative w-full h-screen overflow-hidden">
         <BackgroundVideo />
 
-        <div className="absolute inset-0 z-10 flex items-center px-8">
-          <div className="text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Innovate. <br />
-              Automate. <br />
-              Elevate.
-            </h1>
-            <p className="text-xl md:text-2xl font-medium max-w-xl">
-              Empowering your business with intelligent design, <br />
-              smart automation, and digital excellence
-            </p>
-          </div>
-        </div>
+        <div className="absolute inset-0 z-10 flex items-center justify-center px-4 sm:px-8 text-center">
+  <div className="text-white max-w-xs sm:max-w-md md:max-w-xl w-full">
+    <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 leading-snug sm:leading-tight">
+      Innovate. <br />
+      Automate. <br />
+      Elevate.
+    </h1>
+    <p className="text-sm sm:text-lg md:text-2xl font-medium leading-relaxed">
+      Empowering your business with intelligent design,
+      <br className="hidden sm:block" />
+      smart automation, and digital excellence.
+    </p>
+  </div>
+</div>
+
       </div>
+
+      {/* Page Sections */}
       <TechnologiesSection />
       <ServicesSection />
       <AboutUsSection />

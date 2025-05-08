@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
-import BlgVideo from '../components/blgvideo';
+
 
 const blogPosts = [
   {
@@ -43,63 +43,87 @@ export default function BlogPage() {
   return (
     <div className="bg-gradient-to-br from-[#00204a] via-[#003566] to-[#001d3d] text-white font-poppins">
       {/* Hero Section */}
-      <div className="relative w-full h-screen overflow-hidden">
-        <BlgVideo />
-        <div className="absolute inset-0 z-10 flex items-center justify-center px-8">
-          <div className="flex flex-col max-w-3xl text-center">
-            <h1 className="text-5xl font-bold mb-4 text-blue-600">Insights & Solutions Blog</h1>
-            <p className="text-blue-400 text-lg">
-              Explore our latest articles on technology, development, and digital innovation.
-            </p>
-          </div>
-        </div>
-      </div>
+      <div className="relative w-full h-screen overflow-hidden bg-[#001d3d]">
+  {/* Carousel of 4 images */}
+  <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
+    <motion.div
+      className="flex w-[400%] h-full"
+      animate={{ x: ['0%', '-100%'] }}
+      transition={{
+        repeat: Infinity,
+        ease: 'linear',
+        duration: 30, // adjust speed
+      }}
+    >
+      {['/hi1.jpg', '/hi2.jpg', '/hi3.jpg', '/hi4.jpg'].map((src, idx) => (
+        <Image
+          key={idx}
+          src={src}
+          alt={`Hero Image ${idx + 1}`}
+          width={1920}
+          height={1080}
+          className="w-full h-full object-cover"
+        />
+      ))}
+    </motion.div>
+  </div>
+
+  {/* Overlay Text */}
+  <div className="absolute inset-0 z-10 flex items-center justify-center px-8">
+    <div className="flex flex-col max-w-3xl text-center text-white bg-black/50 p-6 rounded-xl">
+      <h1 className="text-5xl font-bold mb-4 text-blue-400">Insights & Solutions Blog</h1>
+      <p className="text-blue-200 text-lg">
+        Explore our latest articles on technology, development, and digital innovation.
+      </p>
+    </div>
+  </div>
+</div>
+
 
       {/* Blog Posts Carousel */}
-      <section className="py-16 px-6 max-w-7xl mx-auto">
-        <div className="overflow-x-auto hide-scrollbar">
-          <div className="flex space-x-8 w-max">
-            {blogPosts.map((post, idx) => {
-              const isExpanded = expanded === idx;
-              const preview = post.fullContent.slice(0, 200) + '...';
+      <section className="py-16 px-6 max-w-7xl mx-auto overflow-hidden relative">
+  <div className="animate-scroll inline-flex space-x-8 w-max">
+    {blogPosts.map((post, idx) => {
+      const isExpanded = expanded === idx;
+      const preview = post.fullContent.slice(0, 200) + '...';
 
-              return (
-                <motion.div key={idx} whileHover={{ scale: 1.02 }} className="min-w-[320px] max-w-sm">
-                  <Card className="bg-[#003566] text-white w-full h-[500px] flex flex-col justify-between">
-                    <CardContent className="p-0 flex flex-col h-full">
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        width={600}
-                        height={400}
-                        className="w-full h-48 object-cover rounded-t"
-                      />
-                      <div className="p-6 flex flex-col justify-between grow">
-                        <div>
-                          <h4 className="text-xl font-semibold mb-2">{post.title}</h4>
-                          <p className="text-blue-200 text-sm mb-2">{post.date}</p>
-                          <div
-                            className="text-blue-100 text-sm mb-4 overflow-hidden"
-                            style={{ maxHeight: isExpanded ? '160px' : '100px' }}
-                          >
-                            {isExpanded ? post.fullContent : preview}
-                          </div>
-                        </div>
-                        <button
-                          onClick={() => setExpanded(isExpanded ? null : idx)}
-                          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded transition mt-auto"
-                        >
-                          {isExpanded ? 'Read Less' : 'Read More'}
-                        </button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      return (
+        <motion.div key={idx} whileHover={{ scale: 1.02 }} className="min-w-[320px] max-w-sm">
+          <Card className="bg-[#003566] text-white w-full h-[500px] flex flex-col justify-between">
+            <CardContent className="p-0 flex flex-col h-full">
+              <Image
+                src={post.image}
+                alt={post.title}
+                width={600}
+                height={400}
+                className="w-full h-48 object-cover rounded-t"
+              />
+              <div className="p-6 flex flex-col justify-between grow">
+                <div>
+                  <h4 className="text-xl font-semibold mb-2">{post.title}</h4>
+                  <p className="text-blue-200 text-sm mb-2">{post.date}</p>
+                  <div
+                    className="text-blue-100 text-sm mb-4 overflow-hidden"
+                    style={{ maxHeight: isExpanded ? '160px' : '100px' }}
+                  >
+                    {isExpanded ? post.fullContent : preview}
+                  </div>
+                </div>
+                <button
+                  onClick={() => setExpanded(isExpanded ? null : idx)}
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded transition mt-auto"
+                >
+                  {isExpanded ? 'Read Less' : 'Read More'}
+                </button>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+      );
+    })}
+  </div>
+</section>
+
     </div>
   );
 }
