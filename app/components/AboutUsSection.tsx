@@ -2,12 +2,13 @@
 
 import Link from 'next/link';
 import AnimatedBubbles from './AnimatedBubbles';
+import AbVideo from './abvideo';
 
 const aboutContent = [
   {
     title: 'Who We Are',
     desc: 'We are a team of passionate innovators delivering cutting-edge digital solutions for businesses worldwide.',
-    video: '/About.mp4',
+    video: <AbVideo/>,
   },
 ];
 
@@ -57,14 +58,7 @@ const AboutUsSection = () => {
 
             {/* Right Full Video Section */}
             <div className="lg:w-1/2 h-full rounded-lg overflow-hidden">
-              <video
-                src={item.video}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover rounded-lg shadow-lg"
-              />
+             <AbVideo/>
             </div>
           </div>
         ))}

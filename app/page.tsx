@@ -1,25 +1,18 @@
-'use client';
+"use client";
 
-
-import TechnologiesSection from './components/TechnologiesSection';
-import ServicesSection from './components/ServicesSection';
-import AboutUsSection from './components/AboutUsSection';
-import TestimonialSection from './components/TestimonialSection';
-import ContactUsSection from './components/ContactUsSection';
-import LatestBlogSection from './components/LatestBlogSection';
-import BackgroundVideo from './components/bgvideo';
-
+import TechnologiesSection from "./components/TechnologiesSection";
+import ServicesSection from "./components/ServicesSection";
+import AboutUsSection from "./components/AboutUsSection";
+import TestimonialSection from "./components/TestimonialSection";
+import ContactUsSection from "./components/ContactUsSection";
+import LatestBlogSection from "./components/LatestBlogSection";
+import BackgroundVideo from "./components/bgvideo";
 
 export default function Home() {
   return (
     <div className="relative w-full">
       <div className="relative w-full h-screen overflow-hidden">
-     <BackgroundVideo/>
-
-
-
-
-
+        <BackgroundVideo />
 
         <div className="absolute inset-0 z-10 flex items-center px-8">
           <div className="text-white">
