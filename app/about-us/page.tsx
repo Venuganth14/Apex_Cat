@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import TestimonialSection from '../components/TestimonialSection';
+import AbVideo from '../components/abvideo';
 
 export default function AboutUsPage() {
   return (
@@ -13,15 +14,7 @@ export default function AboutUsPage() {
 
       {/* Hero Section */}
       <div className="relative w-full h-screen overflow-hidden">
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover z-0 pointer-events-none"
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          <source src="/About.mp4" type="video/mp4" />
-        </video>
+        <AbVideo/>
         <div className="absolute inset-0 z-10 flex items-center justify-center">
   <h1 className="text-5xl lg:text-6xl font-bold text-blue-600 text-center">About Us</h1>
 </div>

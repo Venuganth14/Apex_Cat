@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import AnimatedBubbles from './AnimatedBubbles';
-import AbVideo from './abvideo';
+import Link from "next/link";
+import AnimatedBubbles from "./AnimatedBubbles";
+import AbVideo from "./abvideo";
 
 const aboutContent = [
   {
-    title: 'Who We Are',
-    desc: 'We are a team of passionate innovators delivering cutting-edge digital solutions for businesses worldwide.',
-    video: <AbVideo/>,
+    title: "Who We Are",
+    desc: "We are a team of passionate innovators delivering cutting-edge digital solutions for businesses worldwide.",
+    video: "/About.mp4",
   },
 ];
 
@@ -20,8 +20,7 @@ const AboutUsSection = () => {
     >
       {/* Overlay Bubbles (Left & Right) */}
       <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
-      <AnimatedBubbles count={20} direction="both" />
-
+        <AnimatedBubbles count={20} direction="both" />
       </div>
 
       {/* Main Content */}
@@ -40,8 +39,11 @@ const AboutUsSection = () => {
                 Work Together <br /> for Your Business
               </h3>
               <p className="text-blue-300 text-lg mb-6">
-                At Apex, we specialize in providing IT consulting and software development services tailored to the unique needs of non-IT organizations.
-                We understand that technology can be complex, and our team of experts is here to bridge the gap, helping you leverage its power to achieve your business goals.
+                At Apex, we specialize in providing IT consulting and software
+                development services tailored to the unique needs of non-IT
+                organizations. We understand that technology can be complex, and
+                our team of experts is here to bridge the gap, helping you
+                leverage its power to achieve your business goals.
               </p>
               <ul className="list-disc list-inside text-blue-400 space-y-2 mb-8 text-lg">
                 <li>Solution We Provide For You</li>
@@ -57,8 +59,9 @@ const AboutUsSection = () => {
             </div>
 
             {/* Right Full Video Section */}
-            <div className="lg:w-1/2 h-full rounded-lg overflow-hidden">
-             <AbVideo/>
+            {/* Right Full Video Section */}
+            <div className="lg:w-1/2 h-full rounded-lg overflow-hidden relative">
+              <AbVideo />
             </div>
           </div>
         ))}

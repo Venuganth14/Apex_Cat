@@ -3,6 +3,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import BlgVideo from '../components/blgvideo';
 
 const blogPosts = [
   {
@@ -43,15 +44,7 @@ export default function BlogPage() {
   return (
     <div className="bg-gradient-to-br from-[#00204a] via-[#003566] to-[#001d3d] text-white font-poppins">
          <div className="relative w-full h-screen overflow-hidden">
-          <video
-            className="absolute top-0 left-0 w-full h-full object-cover z-0 pointer-events-none"
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
-            <source src="/Blog.mp4" type="video/mp4" />
-          </video>
+          <BlgVideo/>
           <div className="absolute inset-0 z-10 flex items-center justify-center px-8">
   <div className="flex flex-col max-w-3xl text-center">
     <h1 className="text-5xl font-bold mb-4 text-blue-600">Insights & Solutions Blog</h1>
