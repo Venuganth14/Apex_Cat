@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import AnimatedBubbles from './AnimatedBubbles';
 
 const services = [
@@ -52,9 +53,11 @@ const ServicesSection = () => {
           <p className="text-blue-300 text-lg mb-6">
             From intelligent automation to secure cloud systems, mobile innovation to tailored CRM platforms, our services are built to drive efficiency, scalability, and digital success - all under one roof.
           </p>
-          <button className="mt-2 w-fit px-6 py-3 rounded-full border border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition font-semibold">
-            Know More
-          </button>
+          <Link href="/services">
+            <button className="mt-2 w-fit px-6 py-3 rounded-full border border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition font-semibold">
+              Know More
+            </button>
+          </Link>
         </div>
       </div>
 

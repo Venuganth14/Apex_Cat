@@ -85,7 +85,7 @@ export default function CareersPage() {
           love to hear from you.
         </p>
         <a
-          href="/job-apply"
+          href="/contact"
           className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition"
         >
           Join Our Team

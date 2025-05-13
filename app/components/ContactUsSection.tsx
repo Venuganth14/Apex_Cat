@@ -18,10 +18,10 @@ const ContactUsSection = () => {
         <h2 className="text-4xl md:text-5xl font-bold mb-8">
           Get Started with APEX CATALYST
         </h2>
-        
-        {/* Modern Contact Button */}
+
+        {/* Linked Contact Button */}
         <Link
-          href="#"
+          href="/contact" // 🔗 Now links to the actual Contact Page
           className="inline-block bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold text-lg py-3 px-8 rounded-full shadow-lg transform transition-transform hover:scale-105"
         >
           <span className="flex items-center gap-3 justify-center">

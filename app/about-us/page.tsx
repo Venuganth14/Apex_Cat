@@ -102,9 +102,9 @@ export default function AboutUsPage() {
         <h2 className="text-4xl font-bold mb-12">Our Awesome Team Members</h2>
         <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
           {[
-            { name: 'Bhanuka', role: 'CEO', img: '/BB.jpeg' },
-            { name: 'Dushan', role: 'Director', img: '/DD.jpeg' },
-            { name: 'Omar Nafiz', role: 'Director', img: '/OO.jpeg' },
+            { name: 'Bhanuka Kariyawasam', role: 'Director of Operations CEO', img: '/BB.jpeg' },
+            { name: 'Dushan Hemachandra', role: 'Director of Marketing', img: '/DD.jpeg' },
+            { name: 'Md Omar Nafiz', role: 'Director of Management', img: '/OO.jpeg' },
           ].map((member, idx) => (
             <Card key={idx} className="bg-[#003566] text-white h-[320px] flex flex-col items-center justify-center p-6">
               <CardContent className="flex flex-col items-center justify-center">

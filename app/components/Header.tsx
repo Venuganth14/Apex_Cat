@@ -44,13 +44,13 @@ const Header = () => {
 
       {/* Mobile Navigation Dropdown */}
       {isOpen && (
-        <div className="md:hidden mt-3 bg-[#001d3d] rounded-lg px-6 py-5 space-y-4 text-white font-medium shadow-md">
-          <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link href="/about-us" onClick={() => setIsOpen(false)}>About Us</Link>
-          <Link href="/blog" onClick={() => setIsOpen(false)}>Blog</Link>
-          <Link href="/careers" onClick={() => setIsOpen(false)}>Careers</Link>
-          <Link href="/services" onClick={() => setIsOpen(false)}>Services</Link>
-          <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+        <div className="md:hidden mt-3 bg-[#001d3d] rounded-lg px-6 py-5 text-white font-medium shadow-md space-y-3">
+          <Link href="/" className="block" onClick={() => setIsOpen(false)}>Home</Link>
+          <Link href="/about-us" className="block" onClick={() => setIsOpen(false)}>About Us</Link>
+          <Link href="/blog" className="block" onClick={() => setIsOpen(false)}>Blog</Link>
+          <Link href="/careers" className="block" onClick={() => setIsOpen(false)}>Careers</Link>
+          <Link href="/services" className="block" onClick={() => setIsOpen(false)}>Services</Link>
+          <Link href="/contact" className="block" onClick={() => setIsOpen(false)}>Contact</Link>
         </div>
       )}
     </header>
@@ -58,5 +58,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
