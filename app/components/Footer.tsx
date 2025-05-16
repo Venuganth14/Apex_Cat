@@ -1,94 +1,122 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FaFacebookF, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#011c3a] text-gray-300 py-8 px-4 lg:px-16 text-xs">
-      <div className="max-w-[1440px] mx-auto space-y-8">
+    <footer className="bg-[#011c3a] text-gray-300 px-6 lg:px-24 py-12 text-sm overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
 
-        {/* Main Footer Grid Row */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
-
-          {/* 1. Logo + Contact */}
-          <div className="space-y-2">
-            <Image src="/logo.png" alt="Apex Catalyst" width={120} height={40} className="object-contain" />
-            <div className="text-white leading-5">
-              <p><strong>T:</strong> 1300 472 849 | +94 711 737 175 | +61 401 561 481</p>
-              <p><strong>E:</strong> support@apexcatalyst.com.au</p>
-              <p>Level-5, Suite – 5.14, 365 Little Collins St, Melbourne, VIC 3000</p>
-              <p>376/A Kaduwela Rd, Battaramulla 10120, Sri Lanka</p>
-              <p className="italic text-blue-300">Mon – Fri, 9.00am – 5.00pm</p>
-            </div>
+        {/* Logo & Info */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="space-y-4"
+        >
+          {/* Replace with your logo */}
+          <div className="flex items-center space-x-2">
+            <Image
+              src="/logo.png" // Ensure logo is in /public directory
+              alt="Grance Logo"
+              width={70}
+              height={70}
+              className="rounded-full"
+            />
+            <span className="text-xl font-semibold">
+             Apex Catalyst
+              </span>
           </div>
 
-          {/* 2. Our Services */}
-          <div className="space-y-2">
-            <h4 className="text-white font-semibold">Our Services</h4>
-            <ul className="space-y-1 text-blue-200">
-              <li>Web Development</li>
-              <li>Mobile Apps</li>
-              <li>Cloud Infrastructure</li>
-              <li>CRM Solutions</li>
-              <li>AI Automation</li>
-              <li>Digital Strategy</li>
-            </ul>
+          <p className="text-xl font-semibold"> Innovate, Automate, Elevate.
+
+          </p>
+          <div className="space-y-1">
+            <p className="flex items-center"><span className="text-yellow-500 mr-2">📍</span> Level-5, Suite – 5.14, 365 Little Collins St, Melbourne, VIC 3000</p>
+            <p className="flex items-center"><span className="text-yellow-500 mr-2">📍</span> 376/A Kaduwela Rd, Battaramulla 10120, Sri Lanka</p>
+            <p className="flex items-center"><span className="text-yellow-500 mr-2">📞</span> 1300 472 849 | +94 711 737 175 | +61 401 561 481</p>
+            <p className="flex items-center"><span className="text-yellow-500 mr-2">✉️</span> support@apexcatalyst.com.au</p>
           </div>
+        </motion.div>
 
-          {/* 3. Quick Links */}
-          <div className="space-y-2">
-            <h4 className="text-white font-semibold">Quick Links</h4>
-            <ul className="space-y-1 text-blue-200">
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/about">About</Link></li>
-              <li><Link href="/services">Services</Link></li>
-              <li><Link href="/blog">Blog</Link></li>
-              <li><Link href="/careers">Careers</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
-            </ul>
+        {/* Navigation */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9 }}
+        >
+          <h4 className="text-white font-semibold mb-3">Navigation</h4>
+          <ul className="space-y-2">
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="#">Pages</Link></li>
+            <li><Link href="#">About Us</Link></li>
+            <li><Link href="#">Services</Link></li>
+          </ul>
+        </motion.div>
+
+        {/* Quick Link */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.0 }}
+        >
+          <h4 className="text-white font-semibold mb-3">Quick Link</h4>
+          <ul className="space-y-2">
+            <li><Link href="#">Contact Us</Link></li>
+            <li><Link href="#">FAQs</Link></li>
+            <li><Link href="#">Booking</Link></li>
+            <li><Link href="#">Pages</Link></li>
+          </ul>
+        </motion.div>
+
+        {/* Services + Sri Lanka Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.1 }}
+          className="relative"
+        >
+          <h4 className="text-white font-semibold mb-3">Services</h4>
+          <ul className="space-y-2">
+            <li><Link href="#">Home</Link></li>
+            <li><Link href="#">Contact</Link></li>
+            <li><Link href="#">Blog</Link></li>
+            <li><Link href="#">404</Link></li>
+          </ul>
+
+          {/* 🇱🇰 Sri Lanka image positioned */}
+          <div className="absolute top-0 right-0 transform translate-x-12 -translate-y-8 opacity-70">
+            <Image
+              src="/SriLanka (2).JPG"
+              alt="Sri Lanka"
+              width={220}
+              height={200}
+              className="animate-fade-in"
+            />
           </div>
-
-          {/* 4. Flags + Email Form */}
-          <div className="space-y-3 text-center">
-            <Image src="/SriLanka (2).JPG" alt="Sri Lanka & Australia" width={90} height={60} className="mx-auto" />
-            <p className="text-blue-200">Sri Lanka & Australia</p>
-            <form className="flex flex-col space-y-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full px-3 py-1.5 rounded-md bg-white text-black placeholder:text-gray-500 text-xs"
-              />
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-1.5 rounded-md text-xs transition">
-                Stay Connected
-              </button>
-            </form>
-          </div>
-        </div>
-
-        {/* Social Media Row */}
-        <div className="flex justify-center space-x-3 pt-2">
-          <Link href="https://www.facebook.com/profile.php?id=61554572919137">
-            <Image src="/facebook.png" alt="Facebook" width={20} height={20} />
-          </Link>
-          <Link href="https://www.linkedin.com/company/apex-catalyst/?viewAsMember=true">
-            <Image src="/linkedin.png" alt="LinkedIn" width={20} height={20} />
-          </Link>
-          <Link href="https://www.instagram.com/apex_catalyst_sl?igsh=N3F0OW96NXNsbWM0">
-            <Image src="/instagram.png" alt="Instagram" width={20} height={20} />
-          </Link>
-        </div>
-
-        {/* Divider */}
-        <hr className="my-6 border-blue-900" />
-
-        {/* Footer Bottom */}
-        <div className="text-center text-[11px] text-gray-400 flex flex-col md:flex-row justify-between items-center max-w-[1440px] mx-auto px-4">
-          <span>© {new Date().getFullYear()} Apex Catalyst. All Rights Reserved.</span>
-          <Link href="/privacy-policy" className="text-white mt-2 md:mt-0">Privacy Policy</Link>
-        </div>
+        </motion.div>
       </div>
+
+      {/* Social Icons & Copyright */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.4 }}
+        className="mt-12 border-t border-gray-700 pt-6 text-center space-y-4"
+      >
+        <div className="flex justify-center space-x-4 text-yellow-500 text-lg animate-pulse">
+          <a href="#" aria-label="Facebook"><FaFacebookF className="hover:scale-110 transition-transform duration-300" /></a>
+          <a href="#" aria-label="Instragram
+          "><FaTwitter className="hover:scale-110 transition-transform duration-300" /></a>
+          <a href="#" aria-label="LinkedIn
+          "><FaYoutube className="hover:scale-110 transition-transform duration-300" /></a>
+        </div>
+        <p className="text-xs text-gray-400">www.apexcatalyst.com.au</p>
+        <p className="text-xs text-gray-400">© 2025 Apex Catalyst. All Rights Reserved</p>
+      </motion.div>
     </footer>
   );
 };
