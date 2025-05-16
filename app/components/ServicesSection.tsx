@@ -54,7 +54,7 @@ const ServicesSection = () => {
             From intelligent automation to secure cloud systems, mobile innovation to tailored CRM platforms, our services are built to drive efficiency, scalability, and digital success - all under one roof.
           </p>
           <Link href="/services">
-            <button className="mt-2 w-fit px-6 py-3 rounded-full border border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition font-semibold">
+            <button className="mt-2 w-fit px-6 py-3 rounded-full border border-blue-500 text-blue-500 hover:bg-Blue-500 hover:text-white transition font-semibold">
               Know More
             </button>
           </Link>
