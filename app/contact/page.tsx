@@ -3,8 +3,34 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function ContactPage() {
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+
+    if (res.ok) {
+      setStatus("Message sent successfully!");
+      setForm({ name: "", email: "", subject: "", message: "" });
+    } else {
+      setStatus("Failed to send message.");
+    }
+  };
+  
   return (
     <div className="bg-gradient-to-br from-[#00204a] via-[#003566] to-[#001d3d] text-white font-poppins overflow-x-hidden">
       {/* Hero Section with Image */}
@@ -87,35 +113,52 @@ export default function ContactPage() {
         <p className="text-blue-200 text-base sm:text-lg mb-8">
           Have questions or need assistance? Fill out the form below, and we&apos;ll get back to you as soon as possible.
         </p>
-        <form className="space-y-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full p-3 rounded bg-[#001d3d] text-white"
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full p-3 rounded bg-[#001d3d] text-white"
-            />
-          </div>
-          <input
-            type="text"
-            placeholder="Subject"
-            className="w-full p-3 rounded bg-[#001d3d] text-white"
-          />
-          <textarea
-            placeholder="Your Message"
-            className="w-full p-3 rounded bg-[#001d3d] text-white h-40"
-          ></textarea>
-          <button
-            type="submit"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition"
-          >
-            Send Message
-          </button>
-        </form>
+     <form className="space-y-6" onSubmit={handleSubmit}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+          value={form.name}
+          onChange={handleChange}
+          className="w-full p-3 rounded bg-[#001d3d] text-white"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          value={form.email}
+          onChange={handleChange}
+          className="w-full p-3 rounded bg-[#001d3d] text-white"
+        />
+      </div>
+      <input
+        type="text"
+        name="subject"
+        placeholder="Subject"
+        required
+        value={form.subject}
+        onChange={handleChange}
+        className="w-full p-3 rounded bg-[#001d3d] text-white"
+      />
+      <textarea
+        name="message"
+        placeholder="Your Message"
+        required
+        value={form.message}
+        onChange={handleChange}
+        className="w-full p-3 rounded bg-[#001d3d] text-white h-40"
+      ></textarea>
+      <button
+        type="submit"
+        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition"
+      >
+        Send Message
+      </button>
+      {status && <p className="text-blue-300 pt-2">{status}</p>}
+    </form>
       </section>
     </div>
   );

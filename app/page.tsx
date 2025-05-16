@@ -7,8 +7,19 @@ import TestimonialSection from "./components/TestimonialSection";
 import ContactUsSection from "./components/ContactUsSection";
 import LatestBlogSection from "./components/LatestBlogSection";
 import BackgroundVideo from "./components/bgvideo";
+import { useEffect, useState } from "react";
+import Preloader from "./components/Preloader";
 
 export default function Home() {
+   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500); // 1.5s delay
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <Preloader />;
+  
   return (
     <div className="relative w-full">
       {/* Hero Section with Video */}
