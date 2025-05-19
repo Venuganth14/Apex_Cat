@@ -74,7 +74,7 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Services Overview Section */}
+      {/* Services Overview Section with Images */}
       <section className="py-20 px-6 max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold mb-8">We Combine Strategy with Marketing</h2>
         <p className="text-blue-200 text-lg mb-10">
@@ -82,14 +82,29 @@ export default function AboutUsPage() {
         </p>
         <div className="grid md:grid-cols-3 gap-8">
           {[
-            'Software Development', 'Web Development', 'Mobile Application',
-            'Digital Marketing', 'Catalyst Cloud Service', 'Catalyst Digital Innovation'
+            { title: 'Software Development', image: '/CRM Solutions.JPG' },
+            { title: 'Web Development', image: '/WebDevelopement.JPG' },
+            { title: 'Mobile Application', image: '/MobileApplication.JPG' },
+            { title: 'Digital Marketing', image: '/ApexAiAssist.JPG' },
+            { title: 'Catalyst Cloud Service', image: '/Cloud Service.JPG' },
+            { title: 'Catalyst Digital Innovation', image: '/CatalystDigitalInnovation.JPG' },
           ].map((service, idx) => (
             <motion.div key={idx} whileHover={{ scale: 1.05 }}>
-              <Card className="bg-[#003566] text-white">
-                <CardContent className="p-6">
-                  <h4 className="text-xl font-semibold mb-2">{service}</h4>
-                  <p className="text-blue-200 text-sm">High-impact solutions tailored to business goals</p>
+              <Card className="bg-[#003566] text-white h-full">
+                <CardContent className="p-4 flex flex-col items-center">
+                  <div className="relative w-full h-40 mb-4 rounded overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-md"
+                    />
+                  </div>
+                  <h4 className="text-xl font-semibold mb-2">{service.title}</h4>
+                  <p className="text-blue-200 text-sm text-center">
+                    High-impact solutions tailored to business goals
+                  </p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -97,7 +112,7 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Team Section with Uniform Cards */}
+      {/* Team Section */}
       <section className="bg-[#0a1128] py-20 px-6 text-center">
         <h2 className="text-4xl font-bold mb-12">Our Awesome Team Members</h2>
         <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">

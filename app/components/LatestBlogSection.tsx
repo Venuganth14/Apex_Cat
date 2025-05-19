@@ -13,42 +13,42 @@ const blogPosts = [
     date: 'May 1, 2025',
     summary: 'Explore how modern platforms empower brands with automation, reach, and insights.',
     image: '/img 1.JPG',
-    link: '#',
+    link: '/blog',
   },
   {
     title: '02. AI and the Future of Customer Experience',
     date: 'May 2, 2025',
     summary: 'Dive into how AI is transforming business processes and client engagement.',
     image: '/img 2.JPG',
-    link: '#',
+    link: '/blog',
   },
   {
     title: '03. Powering Business with Cloud Solutions',
     date: 'May 3, 2025',
     summary: 'Learn how cloud infrastructure drives reliability, performance, and scale.',
     image: '/img 3.JPG',
-    link: '#',
+    link: '/blog',
   },
   {
     title: '04. The Evolution of Mobile Strategy',
     date: 'May 4, 2025',
     summary: 'How apps have become central to user journeys and product ecosystems.',
     image: '/img 4.JPG',
-    link: '#',
+    link: '/blog',
   },
   {
     title: '05. Security First: Cyber Essentials in 2025',
     date: 'May 5, 2025',
     summary: 'Strategies to safeguard digital assets in an increasingly connected world.',
     image: '/img 5.JPG',
-    link: '#',
+    link: '/blog',
   },
   {
     title: '06. The Rise of UI/UX-Driven Success',
     date: 'May 6, 2025',
     summary: 'Design isn’t just aesthetics—it’s business. Discover its growing importance.',
     image: '/img 6.JPG',
-    link: '#',
+    link: '/blog',
   },
 ];
 
@@ -93,7 +93,9 @@ const LatestBlogSection = () => {
 
       <div className="relative z-10 text-center mb-16">
         <h2 className="uppercase text-blue-400 tracking-widest text-sm mb-2">Latest Blog</h2>
-        <p className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">Insights & Innovations</p>
+        <p className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+          Insights & Innovations
+        </p>
       </div>
 
       <div ref={sliderRef} className="keen-slider relative z-10">
@@ -107,7 +109,9 @@ const LatestBlogSection = () => {
                 <h3 className="text-lg font-bold text-white mb-2">{post.title}</h3>
                 <p className="text-blue-300 text-sm mb-2">{post.date}</p>
                 <p className="text-blue-300 text-sm mb-4">{post.summary}</p>
-                <Link href={post.link} className="text-blue-400 hover:text-white transition">Read More</Link>
+                <Link href={post.link} className="text-blue-400 hover:text-white transition">
+                  Read More
+                </Link>
               </div>
             </div>
           </div>

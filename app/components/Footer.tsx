@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaFacebookF, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -17,23 +17,20 @@ const Footer = () => {
           transition={{ duration: 0.8 }}
           className="space-y-4"
         >
-          {/* Replace with your logo */}
           <div className="flex items-center space-x-2">
             <Image
-              src="/logo.png" // Ensure logo is in /public directory
-              alt="Grance Logo"
+              src="/logo.png"
+              alt="Apex Catalyst Logo"
               width={70}
               height={70}
               className="rounded-full"
             />
             <span className="text-xl font-semibold">
-             Apex Catalyst
-              </span>
+              Apex Catalyst
+            </span>
           </div>
 
-          <p className="text-xl font-semibold"> Innovate, Automate, Elevate.
-
-          </p>
+          <p className="text-xl font-semibold">Innovate, Automate, Elevate.</p>
           <div className="space-y-1">
             <p className="flex items-center"><span className="text-yellow-500 mr-2">📍</span> Level-5, Suite – 5.14, 365 Little Collins St, Melbourne, VIC 3000</p>
             <p className="flex items-center"><span className="text-yellow-500 mr-2">📍</span> 376/A Kaduwela Rd, Battaramulla 10120, Sri Lanka</p>
@@ -87,7 +84,6 @@ const Footer = () => {
             <li><Link href="#">404</Link></li>
           </ul>
 
-          {/* 🇱🇰 Sri Lanka image positioned */}
           <div className="absolute top-0 right-0 transform translate-x-12 -translate-y-8 opacity-70">
             <Image
               src="/SriLanka (2).JPG"
@@ -108,11 +104,15 @@ const Footer = () => {
         className="mt-12 border-t border-gray-700 pt-6 text-center space-y-4"
       >
         <div className="flex justify-center space-x-4 text-yellow-500 text-lg animate-pulse">
-          <a href="#" aria-label="Facebook"><FaFacebookF className="hover:scale-110 transition-transform duration-300" /></a>
-          <a href="#" aria-label="Instragram
-          "><FaTwitter className="hover:scale-110 transition-transform duration-300" /></a>
-          <a href="#" aria-label="LinkedIn
-          "><FaYoutube className="hover:scale-110 transition-transform duration-300" /></a>
+          <a href="https://www.facebook.com/profile.php?id=61554572919137" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <FaFacebookF className="hover:scale-110 transition-transform duration-300" />
+          </a>
+          <a href="https://www.instagram.com/apex_catalyst_sl?igsh=N3F0OW96NXNsbWM0" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <FaInstagram className="hover:scale-110 transition-transform duration-300" />
+          </a>
+          <a href="https://www.linkedin.com/company/apex-catalyst/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <FaLinkedinIn className="hover:scale-110 transition-transform duration-300" />
+          </a>
         </div>
         <p className="text-xs text-gray-400">www.apexcatalyst.com.au</p>
         <p className="text-xs text-gray-400">© 2025 Apex Catalyst. All Rights Reserved</p>

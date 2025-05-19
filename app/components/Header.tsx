@@ -27,9 +27,9 @@ const Header = () => {
         <nav className="hidden md:flex space-x-10 text-white font-semibold text-base ml-auto">
           <Link href="/">Home</Link>
           <Link href="/about-us">About Us</Link>
-          <Link href="/blog">Blog</Link>
-          <Link href="/careers">Careers</Link>
           <Link href="/services">Services</Link>
+          <Link href="/careers">Careers</Link>
+          <Link href="/blog">Blog</Link>
           <Link href="/contact">Contact</Link>
         </nav>
 
@@ -47,9 +47,9 @@ const Header = () => {
         <div className="md:hidden mt-3 bg-[#001d3d] rounded-lg px-6 py-5 text-white font-medium shadow-md space-y-3">
           <Link href="/" className="block" onClick={() => setIsOpen(false)}>Home</Link>
           <Link href="/about-us" className="block" onClick={() => setIsOpen(false)}>About Us</Link>
-          <Link href="/blog" className="block" onClick={() => setIsOpen(false)}>Blog</Link>
-          <Link href="/careers" className="block" onClick={() => setIsOpen(false)}>Careers</Link>
           <Link href="/services" className="block" onClick={() => setIsOpen(false)}>Services</Link>
+          <Link href="/careers" className="block" onClick={() => setIsOpen(false)}>Careers</Link>
+          <Link href="/blog" className="block" onClick={() => setIsOpen(false)}>Blog</Link>
           <Link href="/contact" className="block" onClick={() => setIsOpen(false)}>Contact</Link>
         </div>
       )}
