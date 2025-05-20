@@ -48,9 +48,11 @@ const Footer = () => {
           <h4 className="text-white font-semibold mb-3">Navigation</h4>
           <ul className="space-y-2">
             <li><Link href="/">Home</Link></li>
-            <li><Link href="#">Pages</Link></li>
-            <li><Link href="#">About Us</Link></li>
-            <li><Link href="#">Services</Link></li>
+            <li><Link href="/careers">Careers</Link></li>
+            <li><Link href="/about">About Us</Link></li>
+            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
+            <li><Link href="/blog">Blog</Link></li>
           </ul>
         </motion.div>
 
@@ -62,10 +64,8 @@ const Footer = () => {
         >
           <h4 className="text-white font-semibold mb-3">Quick Link</h4>
           <ul className="space-y-2">
-            <li><Link href="#">Contact Us</Link></li>
-            <li><Link href="#">FAQs</Link></li>
-            <li><Link href="#">Booking</Link></li>
-            <li><Link href="#">Pages</Link></li>
+            <li><Link href="/contact">Contact Us</Link></li>
+            <li><Link href="/faq">FAQs</Link></li>
           </ul>
         </motion.div>
 
@@ -78,10 +78,12 @@ const Footer = () => {
         >
           <h4 className="text-white font-semibold mb-3">Services</h4>
           <ul className="space-y-2">
-            <li><Link href="#">Home</Link></li>
-            <li><Link href="#">Contact</Link></li>
-            <li><Link href="#">Blog</Link></li>
-            <li><Link href="#">404</Link></li>
+            <li><Link href="/services/web-development">Web Development</Link></li>
+            <li><Link href="/services/mobile-application-development">Mobile App Development</Link></li>
+            <li><Link href="/services/digital-marketing">Digital Marketing</Link></li>
+            <li><Link href="/services/catalyst-cloud-service">Catalyst Cloud Service</Link></li>
+            <li><Link href="/services/catalyst-digital-innovation">Digital Innovation</Link></li>
+            <li><Link href="/services/apex-ai-assist">AI Assist</Link></li>
           </ul>
 
           <div className="absolute top-0 right-0 transform translate-x-12 -translate-y-8 opacity-70">
