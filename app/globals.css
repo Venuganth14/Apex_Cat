@@ -227,3 +227,10 @@
     scrollbar-width: none;
   }
 }
+
+@supports (-webkit-touch-callout: none) {
+  .animate-text,
+  .animate-pulse {
+    animation: none !important;
+  }
+}
